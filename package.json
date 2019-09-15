@@ -1,0 +1,25 @@
+{
+  "name": "myanmar-numbers",
+  "version": "0.0.1",
+  "description": "Myanmar number utilities tools - includes convert number into word, convert English number into Myanmar number",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stevenay/myanmar-numbers-js"
+  },
+  "keywords": [
+    "myanmar-numbers"
+  ],
+  "author": "SteveNay",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stevenay/myanmar-numbers-js/issues"
+  },
+  "homepage": "https://github.com/stevenay/myanmar-numbers-js#readme",
+  "devDependencies": {
+    "mocha": "^6.2.0"
+  }
+}

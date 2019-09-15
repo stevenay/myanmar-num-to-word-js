@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Myanmar Numbers Js</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <link rel="stylesheet" href='https://mmwebfonts.comquas.com/fonts/?font=yunghkio' />
+    <style>
+        .unicode-font {
+            font-family: Yunghkio, yanmar3, 'Masterpiece Uni Sans';
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="columns">
+       <div class="column">
+           <h1 class="title has-text-primary" style="margin-top: 1em;">
+               Myanmar Numbers
+           </h1>
+           <h2 class="subtitle">
+               developed by SteveNay
+           </h2>
+       </div>
+    </div>
+    <div class="columns">
+        <div class="column">
+            <article class="message is-primary">
+                <div class="message-body">
+                    Myanmar number utilities tools - includes convert number into word, convert English number into Myanmar number
+                </div>
+            </article>
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column is-two-thirds">
+            <div class="field">
+                <label class="label">Numbers to Words</label>
+                <div class="control">
+                    <input id="number" class="input" type="text" placeholder="Text input">
+                </div>
+                <span id="words" class="unicode-font"></span>
+            </div>
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column is-one-third">
+            <div class="field">
+                <label class="label">Convert Burmese Numbers to English Numbers </label>
+                <div class="control">
+                    <input id="english-number" class="input " type="text" placeholder="Text input">
+                </div>
+                <span id="english-number-shown" class="unicode-font"></span>
+            </div>
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column is-one-third">
+            <div class="field">
+                <label class="label">Convert English Numbers to Burmese Numbers </label>
+                <div class="control">
+                    <input id="burmese-number" class="input " type="text" placeholder="Text input">
+                </div>
+                <span id="burmese-number-shown" class="unicode-font"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="myanmarNumbers.js"></script>
+<script>
+    document.getElementById('number').onkeyup = function () {
+        document.getElementById('words').innerHTML = myanmarNumbers.convertToBurmeseWords(
+            document.getElementById('number').value, 'speech');
+    };
+
+    document.getElementById('english-number').onkeyup = function () {
+        document.getElementById('english-number-shown').innerHTML = myanmarNumbers.convertToEnglishNumber(
+            document.getElementById('english-number').value);
+    };
+
+    document.getElementById('burmese-number').onkeyup = function () {
+        document.getElementById('burmese-number-shown').innerHTML = myanmarNumbers.convertToBurmeseNumber(
+            document.getElementById('burmese-number').value);
+    };
+</script>
+
+</body>
+</html>
