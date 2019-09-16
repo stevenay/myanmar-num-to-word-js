@@ -41,10 +41,10 @@ You can install myanmar-num-to-word with  [bower](http://bower.io/):
 bower install myanmar-num-to-word  
 ```  
   
-Or you can simply include the CDN link, kindly provided by  [unpkg](https://cdnjs.com/). 
+Or you can simply include the CDN link, kindly provided by  [unpkg](https://unpkg.com/myanmar-num-to-word@latest). 
 
 ```  
-<script src="https://unpkg.com/myanmar-num-to-word"></script>  
+<script src="https://unpkg.com/myanmar-num-to-word@latest"></script>  
 ```
     
 ## Usages 
