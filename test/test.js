@@ -1,5 +1,5 @@
 var assert = require("assert");
-var myanmarNumbers = require("../myanmarNumbers");
+var myanmarNumbers = require("../myanmarNumtoWord");
 
 describe('Numbers:', function() {
     describe('Convert from Burmese to English Numbers', function() {
