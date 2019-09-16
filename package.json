@@ -1,6 +1,6 @@
 {
   "name": "myanmar-num-to-word",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Myanmar-Num-to-Word is simple Javascript module to convert Myanmar numbers **digits to words** plus **burmese numbers to english numbers** conversion.",
   "main": "myanmarNumToWord.js",
   "scripts": {
