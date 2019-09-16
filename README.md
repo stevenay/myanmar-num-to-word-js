@@ -1,6 +1,8 @@
 # Myanmar-Num-to-Word   
 **Myanmar-Num-to-Word** is simple Javascript module to convert Myanmar numbers **digits to words** plus **burmese numbers to english numbers** conversion.
 
+Available to test on [Demo](https://myanmar-num-to-word.herokuapp.com).
+
 ## Examples
 ### Numbers to Words    
 1	=> တစ်<br/>
@@ -32,7 +34,9 @@ Speech Mode => တစ်ထောင့် နှစ်ရာ့ သုံးဆ
 ## Installation    
 ##### Install using npm:    
     
-``` npm install myanmar-num-to-word --save ```  
+```
+npm install myanmar-num-to-word --save  
+```  
 
 ##### In the browser  
 You can install myanmar-num-to-word with  [bower](http://bower.io/):  
@@ -53,20 +57,20 @@ Or you can simply include the CDN link, kindly provided by  [unpkg](https://unpk
 ``` 
 <script src="myanmarNumToWord.js"></script> 
 <script>    
-  console.log(myanmarNumbers.convertToBurmeseWords(12345)); // တစ်သောင်း နှစ်ထောင် သုံးရာ လေးဆယ့်ငါး
-  console.log(myanmarNumbers.convertToBurmeseWords(12345, 'speech')); // တစ်သောင်း နှစ်ထောင့် သုံးရာ့ လေးဆယ့်ငါး
-  console.log(myanmarNumbers.convertToEnglishNumber('၁၂၃၄၅')); // 12345
-  console.log(myanmarNumbers.convertToBurmeseNumber(12345)); // ၁၂၃၄၅  
+  console.log(myanmarNumToWord.convertToBurmeseWords(12345)); // တစ်သောင်း နှစ်ထောင် သုံးရာ လေးဆယ့်ငါး
+  console.log(myanmarNumToWord.convertToBurmeseWords(12345, 'speech')); // တစ်သောင်း နှစ်ထောင့် သုံးရာ့ လေးဆယ့်ငါး
+  console.log(myanmarNumToWord.convertToEnglishNumber('၁၂၃၄၅')); // 12345
+  console.log(myanmarNumToWord.convertToBurmeseNumber(12345)); // ၁၂၃၄၅  
 </script>  
 ```
 
 ### In Node  
 ``` 
-const myanmarNumbers = require('./myanmarNumToWord.js');  
-myanmarNumbers.convertToBurmeseWords(12345); // တစ်သောင်း နှစ်ထောင် သုံးရာ လေးဆယ့်ငါး  
-myanmarNumbers.convertToBurmeseWords(12345, 'speech'); // တစ်သောင်း နှစ်ထောင့် သုံးရာ့ လေးဆယ့်ငါး
-myanmarNumbers.convertToEnglishNumber('၁၂၃၄၅'); // 12345  
-myanmarNumbers.convertToBurmeseNumber(12345); // ၁၂၃၄၅  
+const myanmarNumToWord = require('myanmar-num-to-word');  
+myanmarNumToWord.convertToBurmeseWords(12345); // တစ်သောင်း နှစ်ထောင် သုံးရာ လေးဆယ့်ငါး  
+myanmarNumToWord.convertToBurmeseWords(12345, 'speech'); // တစ်သောင်း နှစ်ထောင့် သုံးရာ့ လေးဆယ့်ငါး
+myanmarNumToWord.convertToEnglishNumber('၁၂၃၄၅'); // 12345  
+myanmarNumToWord.convertToBurmeseNumber(12345); // ၁၂၃၄၅  
 ```    
 
 ## Credit for Numerical Knowledge  
