@@ -1,24 +1,24 @@
 {
-  "name": "myanmar-numbers",
+  "name": "myanmar-num-to-word",
   "version": "0.0.1",
-  "description": "Myanmar number utilities tools - includes convert number into word, convert English number into Myanmar number",
-  "main": "index.js",
+  "description": "**Myanmar-Num-to-Word** is simple Javascript module to convert Myanmar numbers **digits to words** plus **burmese numbers to english numbers** conversion.",
+  "main": "myanmarNumToWord.js",
   "scripts": {
     "test": "mocha"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/stevenay/myanmar-numbers-js"
+    "url": "https://github.com/stevenay/myanmar-num-to-word"
   },
   "keywords": [
-    "myanmar-numbers"
+    "myanmar-numbers", "number-to-word"
   ],
-  "author": "SteveNay",
+  "author": "SteveNay (naylinaung.softwarearchitect@gmail.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/stevenay/myanmar-numbers-js/issues"
+    "url": "https://github.com/stevenay/myanmar-num-to-word/issues"
   },
-  "homepage": "https://github.com/stevenay/myanmar-numbers-js#readme",
+  "homepage": "https://github.com/stevenay/myanmar-num-to-word#readme",
   "devDependencies": {
     "mocha": "^6.2.0"
   }

@@ -1,8 +1,8 @@
 (function (global) {
     'use strict';
 
-    function myanmarNumbers() {
-        var _myanmarNumbers = {};
+    function myanmarNumToWord() {
+        var _myanmarNumToWord = {};
 
         var words = ['', 'တစ်', 'နှစ်', 'သုံး', 'လေး', 'ငါး', 'ခြောက်', 'ခုနှစ်', 'ရှစ်', 'ကိုး', 'တစ်ဆယ်'];
         var wordsConcat = words.slice(1).join('|');
@@ -20,7 +20,10 @@
             "၉": 9
         };
 
-        _myanmarNumbers.convertToEnglishNumber = function (numberInput) {
+        _myanmarNumToWord.convertToEnglishNumber = function (numberInput) {
+            // convert to num to string
+            numberInput = numberInput.toString();
+
             // check for wa lone cases
             numberInput = numberInput.replace(/([၁၂၃၄၅၆၇၈၉၀])ဝ/g, '$10');
             numberInput = numberInput.replace(/ဝ([၁၂၃၄၅၆၇၈၉၀])/g, '0$1');
@@ -33,8 +36,9 @@
             return numberInput;
         };
 
-        _myanmarNumbers.convertToBurmeseNumber = function (numberInput) {
-            numberInput = numberInput.toString()
+        _myanmarNumToWord.convertToBurmeseNumber = function (numberInput) {
+            // convert to num to string
+            numberInput = numberInput.toString();
 
             Object.keys(numbers).forEach(function (item) {
                 const re = new RegExp(numbers[item], "g");
@@ -46,10 +50,10 @@
 
         // We will add functions to our library here !
         // Just create a property to our library object.
-        _myanmarNumbers.convertToBurmeseWords = function (num, wordType = 'written') {
+        _myanmarNumToWord.convertToBurmeseWords = function (num, wordType = 'written') {
 
             // convert to english number first
-            num = _myanmarNumbers.convertToEnglishNumber(num);
+            num = _myanmarNumToWord.convertToEnglishNumber(num);
 
             if ((num = num.toString()).length > 11) return 'overflow';
             var n = ('000000000' + num).substr(-10).match(/^(\d{1})(\d{1})(\d{1})(\d{2})(\d{1})(\d{1})(\d{1})(\d{2})$/);
@@ -58,7 +62,6 @@
 
             var upperLakh = '';
             var lowerLakh = '';
-            var final = '';
             upperLakh += (n[1] != 0) ? 'သိန်း' + words[n[1][0]] + 'သောင်း' : '';
             upperLakh += (n[2] != 0) ? ((upperLakh != '') ? '' : 'သိန်း') + words[n[2][0]] + 'ထောင်' : '';
             upperLakh += (n[3] != 0) ? ((upperLakh != '') ? '' : 'သိန်း') + words[n[3][0]] + 'ရာ' : '';
@@ -76,7 +79,7 @@
             lowerLakh += (n[7] != 0) ? (words[Number(n[7])]) + 'ရာ' : '';
             lowerLakh += (n[8] != 0) ? (words[Number(n[8])] || words[n[8][0]] + 'ဆယ်' + words[n[8][1]]) : '';
 
-            final = (upperLakh !== '' && lowerLakh !== '') ? upperLakh + ' နှင့် ' + lowerLakh : upperLakh + lowerLakh;
+            var final = (upperLakh !== '' && lowerLakh !== '') ? upperLakh + ' နှင့် ' + lowerLakh : upperLakh + lowerLakh;
 
             const re = new RegExp("(ဆယ်(?=" + wordsConcat + "))|(ရာ(?=" + wordsConcat + "))|(ထောင်(?=" + wordsConcat + "))|(သောင်း)", 'gi');
             final = final.replace(re, function ($0) {
@@ -93,23 +96,24 @@
             return final.trim();
         }
 
-        return _myanmarNumbers;
+        return _myanmarNumToWord;
     }
 
     if (typeof define === 'function' && define.amd) {
         define(function () {
-            return myanmarNumbers();
+            return myanmarNumToWord();
         });
 
     } else if (typeof exports !== 'undefined') {
         if (typeof module !== 'undefined' && module.exports) {
-            exports = module.exports = myanmarNumbers();
+            exports = module.exports = myanmarNumToWord();
         }
-        exports.myanmarNumbers = myanmarNumbers();
+        exports.myanmarNumToWord = myanmarNumToWord();
 
-    } else if (typeof (global.myanmarNumbers) === 'undefined') {
-        global.myanmarNumbers = myanmarNumbers();
+    } else if (typeof (global.myanmarNumToWord) === 'undefined') {
+        global.myanmarNumToWord = myanmarNumToWord();
 
     }
 
 })(this); // We send the global variable withing our function
+

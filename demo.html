@@ -73,20 +73,24 @@
 </div>
 
 
-<script src="myanmarNumbers.js"></script>
+<script src="myanmarNumToWord.js"></script>
 <script>
+    console.log(myanmarNumToWord.convertToBurmeseWords(12345)); // တစ်သောင်း နှစ်ထောင် သုံးရာ လေးဆယ့်ငါး
+    console.log(myanmarNumToWord.convertToEnglishNumber('၁၂၃၄၅')); // 12345
+    console.log(myanmarNumToWord.convertToBurmeseNumber(12345)); // ၁၂၃၄၅
+
     document.getElementById('number').onkeyup = function () {
-        document.getElementById('words').innerHTML = myanmarNumbers.convertToBurmeseWords(
+        document.getElementById('words').innerHTML = myanmarNumToWord.convertToBurmeseWords(
             document.getElementById('number').value, 'speech');
     };
 
     document.getElementById('english-number').onkeyup = function () {
-        document.getElementById('english-number-shown').innerHTML = myanmarNumbers.convertToEnglishNumber(
+        document.getElementById('english-number-shown').innerHTML = myanmarNumToWord.convertToEnglishNumber(
             document.getElementById('english-number').value);
     };
 
     document.getElementById('burmese-number').onkeyup = function () {
-        document.getElementById('burmese-number-shown').innerHTML = myanmarNumbers.convertToBurmeseNumber(
+        document.getElementById('burmese-number-shown').innerHTML = myanmarNumToWord.convertToBurmeseNumber(
             document.getElementById('burmese-number').value);
     };
 </script>
