@@ -44,7 +44,7 @@ bower install myanmar-num-to-word
 Or you can simply include the CDN link, kindly provided by  [unpkg](https://cdnjs.com/). 
 
 ```  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/synaptic/1.1.4/synaptic.js"></script>  
+<script src="https://unpkg.com/myanmar-num-to-word"></script>  
 ```
     
 ## Usages 
