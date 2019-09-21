@@ -52,6 +52,8 @@
         // Just create a property to our library object.
         _myanmarNumToWord.convertToBurmeseWords = function (num, wordType = 'written') {
 
+            if (!num) return num;
+
             // convert to english number first
             num = _myanmarNumToWord.convertToEnglishNumber(num);
 

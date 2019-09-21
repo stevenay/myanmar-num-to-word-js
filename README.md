@@ -1,7 +1,7 @@
 # Myanmar-Num-to-Word   
 **Myanmar-Num-to-Word** is simple Javascript module to convert Myanmar numbers **digits to words** plus **burmese numbers to english numbers** conversion.
 
-Available to test on [Demo](https://myanmar-num-to-word.herokuapp.com).
+Available to test on [Demo](https://myan-num-to-word.herokuapp.com).
 
 ## Examples
 ### Numbers to Words    
@@ -39,13 +39,7 @@ npm install myanmar-num-to-word --save
 ```  
 
 ##### In the browser  
-You can install myanmar-num-to-word with  [bower](http://bower.io/):  
-  
-```  
-bower install myanmar-num-to-word  
-```  
-  
-Or you can simply include the CDN link, kindly provided by  [unpkg](https://unpkg.com/myanmar-num-to-word@latest). 
+You can simply include the CDN link, kindly provided by  [unpkg](https://unpkg.com/myanmar-num-to-word@latest). 
 
 ```  
 <script src="https://unpkg.com/myanmar-num-to-word@latest"></script>  
