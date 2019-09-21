@@ -55,6 +55,10 @@
             // convert to english number first
             num = _myanmarNumToWord.convertToEnglishNumber(num);
 
+            if (isNaN(num)) {
+                throw new Error('Invalid number to convert.');
+            }
+
             if ((num = num.toString()).length > 11) return 'overflow';
             var n = ('000000000' + num).substr(-10).match(/^(\d{1})(\d{1})(\d{1})(\d{2})(\d{1})(\d{1})(\d{1})(\d{2})$/);
 

@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/stevenay/myanmar-num-to-word"
+    "url": "https://github.com/stevenay/myanmar-num-to-word-js"
   },
   "keywords": [
     "myanmar-numbers", "number-to-word"
@@ -16,9 +16,9 @@
   "author": "SteveNay (naylinaung.softwarearchitect@gmail.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/stevenay/myanmar-num-to-word/issues"
+    "url": "https://github.com/stevenay/myanmar-num-to-word-js/issues"
   },
-  "homepage": "https://github.com/stevenay/myanmar-num-to-word#readme",
+  "homepage": "https://github.com/stevenay/myanmar-num-to-word-js#readme",
   "devDependencies": {
     "mocha": "^6.2.0"
   }
