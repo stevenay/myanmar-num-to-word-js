@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/stevenay/myanmar-num-to-word-js#readme",
   "devDependencies": {
-    "mocha": "^6.2.0"
+    "mocha": "^10.2.0"
   }
 }
